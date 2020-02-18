@@ -16,6 +16,7 @@ function App() {
 }
 
 function Baba() {
+  console.log('Baba is rendered')
   const { n, setN } = useContext(C);
   return (
     <div>
@@ -25,6 +26,7 @@ function Baba() {
 }
 
 function Child() {
+  console.log('Child is rendered')
   const { n, setN } = useContext(C);
   const onClick = () => {
     setN(i => i + 1);
