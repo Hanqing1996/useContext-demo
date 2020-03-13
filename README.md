@@ -10,6 +10,8 @@
     </App>
 <context.provider>
 ```
-> A 中的 n 变化了，B需要随之更新。useState/useReducer 的更新方式是让 APP 将更新后的 n 自顶向下再次传递（类似于 props）。
+> A 中的 n 变化了，B需要随之更新。useState/useReducer 的更新方式是让 APP 将更新后的 n 自顶向下再次传递（类似于 props）,在传递过程中各个组件进行检查，如果发现自己内部有n，则更新n。
 
 > 而 vue3 采取的做法是: A 的 n 更新后，检查哪些组件用到了 n，让这些组件再次渲染，不是自顶向下。
+
+> 注意以上提到的两种方式都是局部更新。
